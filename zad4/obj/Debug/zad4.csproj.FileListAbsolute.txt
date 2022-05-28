@@ -1,0 +1,10 @@
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\bin\Debug\zad4.exe.config
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\bin\Debug\zad4.exe
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\bin\Debug\zad4.pdb
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.csproj.AssemblyReference.cache
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.Properties.Resources.resources
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.csproj.GenerateResource.cache
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.csproj.CoreCompileInputs.cache
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.exe
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.pdb
+F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.Form1.resources
