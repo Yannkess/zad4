@@ -19,7 +19,7 @@ namespace zad4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (presence == true)
+            if (presence == true && login == true)
             {
                 this.pictureBox1.Load("zielona.png");
                 this.timer1.Start();
@@ -39,6 +39,7 @@ namespace zad4
             this.pictureBox3.Load("szara.png");
             this.timer1.Stop();
             engine = false;
+            fun = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -78,9 +79,16 @@ namespace zad4
 
         private void button3_Click(object sender, EventArgs e)
         {
-            presence = true;
-            this.timer2.Start();
-            this.pictureBox2.Load("szara.png");
+            if (login == true)
+            {
+                presence = true;
+                this.timer2.Start();
+                this.pictureBox2.Load("szara.png");
+            }
+            else
+            {
+                MessageBox.Show("Zaloguj się!");
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -141,6 +149,7 @@ namespace zad4
                 fun_error = false;
                 this.trackBar1.Value = 0;
                 this.timer3.Start();
+                fun = false;
 
             }
         }
@@ -150,6 +159,27 @@ namespace zad4
             fun = true;
             fun_error = false;
             this.timer3.Start();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Okno2 = new NoweOkno(this);
+            this.Okno2.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            fun = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            login = false;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

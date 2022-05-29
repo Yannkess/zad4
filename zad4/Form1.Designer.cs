@@ -13,6 +13,8 @@ namespace zad4
         private bool fun = false;
         private bool fun_error = false;
         private bool engine = false;
+        public bool login = false;
+        private NoweOkno Okno2;
 
         /// <summary>
         /// Wyczyść wszystkie używane zasoby.
@@ -51,6 +53,10 @@ namespace zad4
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -61,9 +67,9 @@ namespace zad4
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 34);
+            this.button1.Location = new System.Drawing.Point(530, 34);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(83, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Włącz Silnik";
             this.button1.UseVisualStyleBackColor = true;
@@ -71,7 +77,7 @@ namespace zad4
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(530, 34);
+            this.button2.Location = new System.Drawing.Point(621, 34);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 23);
             this.button2.TabIndex = 4;
@@ -85,9 +91,9 @@ namespace zad4
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(629, 34);
+            this.button3.Location = new System.Drawing.Point(530, 80);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(83, 23);
             this.button3.TabIndex = 6;
             this.button3.Text = "Obecność";
             this.button3.UseVisualStyleBackColor = true;
@@ -120,9 +126,9 @@ namespace zad4
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(530, 80);
+            this.button4.Location = new System.Drawing.Point(437, 80);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 23);
+            this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 9;
             this.button4.Text = "Napraw";
             this.button4.UseVisualStyleBackColor = true;
@@ -130,11 +136,11 @@ namespace zad4
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(629, 80);
+            this.button5.Location = new System.Drawing.Point(437, 131);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(75, 36);
             this.button5.TabIndex = 10;
-            this.button5.Text = "Wentylator";
+            this.button5.Text = "Włącz Wentylator";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -189,11 +195,55 @@ namespace zad4
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(437, 34);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "Login";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(530, 132);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 35);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "Wyłącz Wentylator";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(621, 80);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(83, 23);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "Wyloguj";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(621, 131);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(83, 36);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Wyjdź";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -231,11 +281,15 @@ namespace zad4
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 

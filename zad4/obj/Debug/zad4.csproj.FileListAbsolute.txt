@@ -8,3 +8,4 @@ F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.csproj.CoreCompileInputs.
 F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.exe
 F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.pdb
 F:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.Form1.resources
+f:\Studia\Semestr 6\OSK\Zad 4\zad4\zad4\obj\Debug\zad4.NoweOkno.resources
